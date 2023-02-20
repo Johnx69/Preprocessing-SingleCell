@@ -57,13 +57,4 @@ sc.pp.neighbors(adata, n_neighbors=10) # compute neighborhood graph
 sc.tl.umap(adata) # compute UMAP projection
 ```
 
-### 6. Cell Type Identification
-
--   This involves identifying cell types based on the expression of known marker genes or clustering cells based on their similarity in gene expression.
-
-```
-# Identify cell types
-sc.tl.leiden(adata) # cluster cells based on gene expression similarity using Leiden algorithm
-sc.tl.rank_genes_groups(adata, 'leiden', method='t-test') # identify marker genes for each cluster
-```
 
